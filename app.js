@@ -48,7 +48,8 @@ app.use('/premium' , premiumFeaturesRoutes)
 app.use('/password' , ForgetPasswordRouter);
 
 app.use((req ,res)=>{
-    console.log('url' , req.originalUrl)
+    console.log('url' , req.originalUrl);
+    console.log('req is successfully')
     res.sendFile(path.join(__dirname,`frontend/${req.url}`));
 });
 
